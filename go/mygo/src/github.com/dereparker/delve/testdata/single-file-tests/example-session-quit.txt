@@ -1,0 +1,17 @@
+// Step partway through the program and then quit.
+
+-> _ = "breakpoint"
+(godebug) n
+-> x = mul(x, x)
+(godebug) x
+Invalid command. Try "help".
+If you want to print the variable x, use the print command.
+(godebug) p x
+4
+(godebug) s
+-> var x int
+(godebug) p x
+undefined: x
+(godebug) n
+-> for i := 0; i < m; i++ {
+(godebug) quit

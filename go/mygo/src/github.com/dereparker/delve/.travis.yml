@@ -1,0 +1,12 @@
+language: go
+
+go:
+  - 1.4
+
+install: go install
+
+script: go test -v --parallel-tests=10
+
+os:
+  - linux
+  - osx

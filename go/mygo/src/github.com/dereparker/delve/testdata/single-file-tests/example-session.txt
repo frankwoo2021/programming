@@ -1,0 +1,87 @@
+// Stepping straight through the program.
+
+-> _ = "breakpoint"
+(godebug) n
+-> x = mul(x, x)
+(godebug) x
+Invalid command. Try "help".
+If you want to print the variable x, use the print command.
+(godebug) p x
+4
+(godebug) s
+-> var x int
+(godebug) p x
+undefined: x
+(godebug) n
+-> for i := 0; i < m; i++ {
+(godebug) x
+Invalid command. Try "help".
+If you want to print the variable x, use the print command.
+(godebug) p x
+0
+(godebug) i
+Invalid command. Try "help".
+(godebug) p m
+4
+(godebug) n
+-> x = add(x, m)
+(godebug) p x
+0
+(godebug) p i
+0
+(godebug) p m
+4
+(godebug) n
+-> for i := 0; i < m; i++ {
+(godebug) p x
+4
+(godebug) p i
+1
+(godebug) p m
+4
+(godebug) p n
+4
+(godebug) n
+-> x = add(x, m)
+(godebug) p x
+4
+(godebug) n
+-> for i := 0; i < m; i++ {
+(godebug) p x
+8
+(godebug) p i
+2
+(godebug) n
+-> x = add(x, m)
+(godebug) n
+-> for i := 0; i < m; i++ {
+(godebug) p i
+3
+(godebug) n
+-> x = add(x, m)
+(godebug) n
+-> for i := 0; i < m; i++ {
+(godebug) p i
+4
+(godebug) p m
+4
+(godebug) p x
+16
+(godebug) n
+-> return x
+(godebug) p x
+16
+(godebug) n
+-> if x == 4 {
+(godebug) p x
+16
+(godebug) n
+-> } else if n := 2; n == 3 {
+(godebug) n
+-> } else {
+(godebug) n
+-> fmt.Println("What's going on? x ==", x)
+(godebug) p x
+16
+(godebug) n
+What's going on? x == 16
